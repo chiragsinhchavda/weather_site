@@ -1,12 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather Site</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-	
+	<div class="container-fluid d-flex justify-content-center align-items-center w-100 vh-100 bg-light">
+		<div class="container p-0 m-0 h-auto">
+			<div class="card mb-3 h-100 p-0 m-0">
+				<div class="row g-0">
+					<div class="col-md-8">
+						<img src="./weather_bg.jpeg" class="card-img col-md-8" alt="...">
+						<div class="card-img-overlay col-md-8 text-light mt-5">
+							<div class="display-1 mt-5 fw-bold text-center"><span id="temp"></span></div>
+							<div class="display-6 fw-bold text-center"><span id="cloud"></span></div>
+							<div class="display-3 fw-bold text-center"><span id="location"></span></div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card-body">
+							<h5 class="card-title">Weather Details</h5>
+						</div>
+						<div class="card-body table-responsive">
+							<table class="table">
+								<tr>
+									<th scope="row">Cloudy</th>
+									<td class="text-end">not available</td>
+								</tr>
+								<tr>
+									<th scope="row">Humidity</th>
+									<td class="text-end">not available</td>
+								</tr>
+								<tr>
+									<th scope="row">Wind</th>
+									<td class="text-end">not available</td>
+								</tr>
+								<tr>
+									<th scope="row">Pressure</th>
+									<td class="text-end">not available</td>
+								</tr>
+							</table>
+						</div>
+						<div class="card-body">
+							<div class="input-group mb-3">
+								<input type="text" id="city" class="form-control" placeholder="City"
+									aria-label="City" aria-describedby="button-addon2" required>
+							</div>
+							<div class="input-group mb-3">
+								<input type="text" id="state" class="form-control" placeholder="State"
+									aria-label="State" aria-describedby="button-addon2" required>
+							</div>
+							<button onclick="searchData()" class="btn btn-secondary" type="button" id="button-addon2">Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<script src="./index.js"></script>
 </body>
+
 </html>
