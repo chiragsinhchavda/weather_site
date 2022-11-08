@@ -19,12 +19,12 @@
 <body>
 	<div class="container-fluid d-flex justify-content-center align-items-center w-100 vh-100 bg-light">
 		<div class="container p-0 m-0 h-auto">
-			<div class="card mb-3 h-100 p-0 m-0">
+			<div class="card mb-0 mb-md-3 h-100 p-0 m-0">
 				<div class="row g-0">
 					<div class="col-md-8">
-						<img src="./weather_bg.jpeg" class="card-img col-md-8" alt="...">
+						<img src="./weather_bg.jpg" class="card-img col-md-8 h-100" alt="...">
 						<div class="card-img-overlay col-md-8 text-light mt-5">
-							<div class="display-1 mt-5 fw-bold text-center"><span id="temp"></span></div>
+							<div class="display-1 mt-0 mt-md-5 fw-bold text-center"><span id="temp"></span></div>
 							<div class="display-6 fw-bold text-center"><span id="cloud"></span></div>
 							<div class="display-3 fw-bold text-center"><span id="location"></span></div>
 						</div>
@@ -54,15 +54,18 @@
 							</table>
 						</div>
 						<div class="card-body">
-							<div class="input-group mb-3">
-								<input type="text" id="city" class="form-control" placeholder="City"
+							<div class="input-group d-flex flex-column mb-1">
+								<input type="text" id="city" class="form-control w-100 rounded" placeholder="City"
 									aria-label="City" aria-describedby="button-addon2" required>
+								<span id="cityValErrorMsg"></span>
 							</div>
-							<div class="input-group mb-3">
-								<input type="text" id="state" class="form-control" placeholder="State"
+							<div class="input-group d-flex flex-column mb-1">
+								<input type="text" id="state" class="form-control w-100 rounded" placeholder="State"
 									aria-label="State" aria-describedby="button-addon2" required>
+								<span id="stateValErrorMsg"></span>
 							</div>
-							<button onclick="searchData()" class="btn btn-secondary" type="button" id="button-addon2">Search</button>
+							<button onclick="searchData()" class="btn btn-secondary w-100" type="button"
+								id="button-addon2">Search</button>
 						</div>
 					</div>
 				</div>
