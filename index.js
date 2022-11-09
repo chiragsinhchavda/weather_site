@@ -36,9 +36,12 @@ const searchData = () => {
 					return response.json();
 				})
 				.then((data) => {
-					data.forEach(element => {
-						if (element.state.toUpperCase() === stateValue.toUpperCase()) {
+					data.some(element => {
+						if (element.name.toUpperCase() === cityValue.toUpperCase() &&
+							element.state.toUpperCase() === stateValue.toUpperCase()) {
+							city.style.border = '1px solid gray';
 							state.style.border = '1px solid gray';
+							cityErr.innerHTML = '';
 							stateErr.innerHTML = '';
 							lat = element.lat;
 							lon = element.lon;
@@ -56,6 +59,14 @@ const searchData = () => {
 									table[0].children[0].children[2].children[1].innerHTML = data.wind.speed + ' km/h';
 									table[0].children[0].children[3].children[1].innerHTML = data.main.pressure + ' hPa';
 								})
+							return true;
+						}
+						else {
+							city.style.borderBottom = '2px solid red';
+							state.style.borderBottom = '2px solid red';
+							cityErr.innerHTML = 'Please check city name';
+							stateErr.innerHTML = 'Please check state name';
+							return false;
 						}
 					});
 				})
