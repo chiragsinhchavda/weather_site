@@ -98,6 +98,7 @@ const getWeather = () => {
 						table[0].children[0].children[3].children[1].innerHTML = data.main.pressure + ' hPa';
 					})
 			} catch (errorMsg) {
+				console.log(errorMsg)
 				document.body.innerHTML = errorMsg.message;
 			}
 		})
